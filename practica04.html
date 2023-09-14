@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 04</title>
+</head>
+<style>
+   
+    img {
+        box-shadow: 10px 10px 20px red;
+    }
+   figure{
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+   }
+   figcaption{
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+   }
+</style>
+<body>
+    <h1>Imagenes</h1>
+    <div>
+        <div id="prueba">
+
+        <!-- </div>
+        <figure>
+            <img src="https://picsum.photos/id/1/200/200" alt="">
+            <figcaption>Jhone</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="https://picsum.photos/id/2/200/200" alt="">
+            <figcaption>Jane</figcaption>
+        </figure> -->
+        <!-- <figure>
+            <img src="https://picsum.photos/id/3/200/200" alt="">
+            <figcaption>James</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="https://picsum.photos/id/4/200/200" alt="">
+            <figcaption>Jammie</figcaption>
+        </figure> -->
+    </div>
+    <script>
+        const app = document.getElementById("prueba");
+        const url = "https://picsum.photos/id/";
+        const size = "/200/200";
+        
+       
+        
+
+        const picture = (parametro,nombre) => {
+            const src = url+parametro.id+size;
+            return `
+            <figure>
+                <img src="${src}" alt="">
+                <figcaption>${parametro.nombre}</figcaption>
+            </figure>`;
+        }
+        //JSON
+        app.innerHTML = picture({id:"1",nombre:"pepe"}) 
+        app.innerHTML += picture({id:"2",nombre:"luis"})
+        app.innerHTML += picture({id:"3",nombre:"jose"})
+        app.innerHTML += picture({id:"4",nombre:"maria"})
+        //app.innerHTML += picture(4,"jose") normal
+        
+    </script>
+</body>
+</html>
