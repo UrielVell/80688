@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 05</title>
+</head>
+<style>
+   
+    img {
+        box-shadow: 10px 10px 20px red;
+        border-radius: 10px 80px 30px 80px;
+        
+    }
+   figure{
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+   }
+   figcaption{
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+   }
+
+   img.redondo{
+    border-radius: 50%;
+   }
+</style>
+<body>
+    <h1>Imagenes</h1>
+    <div>
+        <div id="prueba">
+
+       
+    </div>
+    <script>
+        const app = document.getElementById("prueba");
+        const url = "https://picsum.photos/id/";
+        const size = "/200/200";
+        
+       
+        
+
+        const picture = (parametro,nombre) => {
+            const src = url+parametro.id+size;
+            return `
+            <figure>
+                <img src="${src}" alt="">
+                <figcaption>${parametro.nombre}</figcaption>
+            </figure>`;
+        }
+        //JSON
+        app.innerHTML = picture({id:"1",nombre:"pepe"}) 
+        app.innerHTML += picture({id:"2",nombre:"luis"})
+        app.innerHTML += picture({id:"3",nombre:"jose"})
+        app.innerHTML += picture({id:"4",nombre:"maria"})
+        //app.innerHTML += picture(4,"jose") normal
+        const lista = document.querySelectorAll("img")
+
+        for (let i =0;i<lista.length;i++){
+            lista[i].addEventListener("click",()=>{
+                //lista[i].style.borderRadius = "50%"
+                lista[i].classList.toggle("redondo")
+            });
+        }
+    </script>
+</body>
+</html>
