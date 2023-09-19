@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 06</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            margin-top: 30px;
+        }
+        form{
+            box-shadow: 20px 20px ;
+            width: 50%;
+            border: 2px solid gray;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        input{
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid gray;
+            height: 50px;
+            margin-top: 10px;
+            font-size: large;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        input[type="submit"]{
+            background-color: darkblue;
+            color: white;
+            margin-top: 30px;
+            width: 100%;
+            height: 40px;
+            border: none;
+            border-radius: 20px;
+        }
+        label{
+            display: block;
+            margin-top: 20px;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inicia Sesión</h1>
+    <form action="" id="login">
+        <label for="user">Nombre de Usuario: </label>
+        <input type="text" id="user" name="user">
+        <label for="pass">Contraseña: </label>
+        <input type="password" id="pass" name="password">
+        <input type="submit" value="Iniciar Sesión">
+    </form>
+
+    <script>
+        const login = document.getElementById("login")
+        login.addEventListener("submit", evento =>{
+            evento.preventDefault()
+            let user = document.getElementById("user").value
+            let pass = document.getElementById("pass").value
+            alert("Usuario: "+user+", Contraseña: "+pass)
+        })
+    </script>
+</body>
+</html>
