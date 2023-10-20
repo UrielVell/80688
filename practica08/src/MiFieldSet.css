@@ -1,0 +1,42 @@
+form{
+    box-shadow: 10px 10px 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: gainsboro;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+fieldset{
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+}
+label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+input[type="submit"]{
+    width: 50%;
+    margin-top: 10px;
+    background-color: blue;
+    color: white;
+    font-size: large;
+}
+
+legend{
+    width: auto;
+}

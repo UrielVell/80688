@@ -1,3 +1,5 @@
+
+import './MiFieldSet.css'
 function MiFieldSet(props){
     const {titulo, input1, input2} = props
     
